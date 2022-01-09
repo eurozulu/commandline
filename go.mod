@@ -1,4 +1,4 @@
-module commandline
+module eurozulu/commandline
 
 go 1.17
 

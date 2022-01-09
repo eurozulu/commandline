@@ -1,7 +1,7 @@
 package main
 
 import (
-	"commandline"
+	"eurozulu/commandline"
 	"fmt"
 	"log"
 	"strings"
