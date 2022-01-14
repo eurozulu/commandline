@@ -61,6 +61,10 @@ func (h *linehistory) Add(s string) {
 	*h = append((*h), s)
 }
 
+func (h linehistory) Contains(s string) bool {
+	return indexOf(s, h) >= 0
+}
+
 func indexOf(s string, ss []string) int {
 	for i, sz := range ss {
 		if s == sz {

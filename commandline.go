@@ -95,7 +95,10 @@ func (cli *CommandLine) returnHandler(keys Sequence) error {
 }
 
 func (cli *CommandLine) escHandler(keys Sequence) error {
-	cli.history.Add(cli.buffer.String())
+	s := cli.buffer.String()
+	if !cli.history.Contains(s) {
+		cli.history.Add(s)
+	}
 	cli.buffer.SetValue(nil)
 	return nil
 }

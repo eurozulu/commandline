@@ -35,6 +35,7 @@ const (
 )
 const SPACE = 32
 const DEL = 127
+const LSQ_BRACKET = 91
 
 type Sequence []byte
 type Sequences map[string]SequenceFunc
@@ -53,8 +54,8 @@ var LINE_FEED = Sequence{CTRL_J}
 var CARRIAGE_RETURN = Sequence{CTRL_M}
 var CR_LF = Sequence{CTRL_M, CTRL_J}
 var ESCAPE = Sequence{ESC}
-var ARROW_UP = Sequence{ESC, 91, 65}
-var ARROW_DOWN = Sequence{ESC, 91, 66}
-var ARROW_RIGHT = Sequence{ESC, 91, 67}
-var ARROW_LEFT = Sequence{ESC, 91, 68}
+var ARROW_UP = Sequence{ESC, LSQ_BRACKET, 65}
+var ARROW_DOWN = Sequence{ESC, LSQ_BRACKET, 66}
+var ARROW_RIGHT = Sequence{ESC, LSQ_BRACKET, 67}
+var ARROW_LEFT = Sequence{ESC, LSQ_BRACKET, 68}
 var DELETE = Sequence{DEL}
